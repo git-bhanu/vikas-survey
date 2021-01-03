@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vikash Survey</title>
+
+	<style>
+		html {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+
+		.wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 80%;
+			margin: auto;
+		}
+
+		.wrap h2 {
+			font-size: 2em;
+			text-align: center;
+		}
+
+		.wrap p {
+			font-size: 1.2em;
+			text-align: center;
+			color: #636363;
+		}
+	</style>
+</head>
+<body onload="redrectToSurvey()">
+
+	<div class="wrap">
+		<div>
+		<h2>Consumers' Perception of BOPS</h2>
+		<p>
+			Hold tight! Redirecting you to the survey.
+		</p>
+		</div>
+
+	</div>
+
+	<script>
+		var heights = window.innerHeight;
+        document.querySelector('.wrap').style.height = heights + "px";
+        redrectToSurvey = function() {
+        	const Links = [
+        	'https://docs.google.com/forms/d/e/1FAIpQLSej6xI5qV2WspADwEyX2qsxb4CDshx_UkW2DHOMryr5kHmilg/viewform',
+        	'https://docs.google.com/forms/d/e/1FAIpQLSfGYXHwe34J8VC0pw6u4qjdbU7Ri1Vfb5JkyEWcdzuTUCGdfA/viewform',
+        	'https://docs.google.com/forms/d/e/1FAIpQLScr-HmGuiVPiFJ8oHQ6_hZVCBAe_uclMuLl4hicOTnRFF5SsQ/viewform',
+        	'https://docs.google.com/forms/d/e/1FAIpQLSfAzKhZ6Qza4HKAZPgJJBXafsxCAR8tSnokFJ-IMBL6to0mNA/viewform'
+        	]
+
+
+			let link = Links[Math.floor(Math.random() * Links.length)];
+			setTimeout(function(){ window.location = link; }, 2000);
+        }
+
+	</script>
+
+</body>
+</html>
